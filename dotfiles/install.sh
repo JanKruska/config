@@ -13,8 +13,6 @@ do
         #Cut everthing before last /
         i=${i##*/}
         ln -is "$PWD/$BASEDIR/$i" "$target_dir/$i"
-        #ln -fs "$ampl_dir/cplex" "$i/cplex"
-        #ln -fs "$ampl_dir/libcplex12100.so" "$i/libcplex12100.so"
         echo -e 'Done: \t' "$PWD/$BASEDIR/$i"
     fi
 done
