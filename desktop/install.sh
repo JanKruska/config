@@ -1,15 +1,18 @@
 #!/bin/bash
 
-files=$PWD/*.desktop
-desktop_dir=~/.local/share/applications/
+BASEDIR=$(dirname "$0")
+target_dir=~/.local/share/applications/
 
-echo Copying desktop configurations to "$desktop_dir"
+echo Creating symlinks from "$BASEDIR" to "$target_dir"
 
-for i in $files
+#Find hidden files in basedir
+#for i in $(find $BASEDIR -type f -path '*/\.*')
+for i in $BASEDIR/*.desktop
 do
-    if test -f "$i" 
-    then
-       cp "$i" "$desktop_dir"
-       echo -e 'Done: \t' "$i"
+    if [ -f $i ]; then
+        #Cut everthing before last /
+        i=${i##*/}
+        ln -is "$PWD/$BASEDIR/$i" "$target_dir/$i"
+        echo -e 'Done: \t' "$PWD/$BASEDIR/$i"
     fi
 done
