@@ -6,3 +6,11 @@
 # Example aliases
 alias zshconfig="kate ~/Documents/common-scripts/dotfiles/.zshrc"
 #alias ohmyzsh="kate ~/Documents/common-scripts/dotfiles/.oh-my-zsh"
+
+#Navigation
+
+alias ..="cd .."
+alias ..2="cd ../.."
+alias ..3="cd ../../.."
+alias ..4="cd ../../../.."
+alias ..5="cd ../../../../.."
