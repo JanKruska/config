@@ -1,4 +1,4 @@
-!#/bin/bash
+#!/bin/bash
 
 killall plasmashell
 kstart5 plasmashell
