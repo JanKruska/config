@@ -116,3 +116,5 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 export PATH="/opt/cuda/bin:$PATH"
+export VISUAL=vim
+export EDITOR="$VISUAL"
