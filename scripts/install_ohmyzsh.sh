@@ -6,6 +6,7 @@ cd "${HOME}/.oh-my-zsh/custom/plugins" || exit
 
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git
 git clone https://github.com/zsh-users/zsh-autosuggestions.git
+git clone --depth 1 -- https://github.com/marlonrichert/zsh-autocomplete.git
 
 echo -e "\nAgnoster theme might need additional Powerline font to render correctly in some programs"
 cd /tmp || exit
