@@ -118,3 +118,4 @@ unset __conda_setup
 export PATH="/opt/cuda/bin:$PATH"
 export VISUAL=vim
 export EDITOR="$VISUAL"
+export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket" #ssh-agent config
