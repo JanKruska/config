@@ -160,3 +160,5 @@ unset __conda_setup
 export VISUAL=vim
 export EDITOR="$VISUAL"
 
+SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket" #ssh-agent configuration
+
