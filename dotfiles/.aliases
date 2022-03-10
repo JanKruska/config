@@ -14,3 +14,6 @@ alias ..2="cd ../.."
 alias ..3="cd ../../.."
 alias ..4="cd ../../../.."
 alias ..5="cd ../../../../.."
+
+#SLURM
+alias squeue="squeue --format='%.18i %.9P %.30j %.8u %.2t %.10M %.6D %R'"
