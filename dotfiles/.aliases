@@ -16,4 +16,17 @@ alias ..4="cd ../../../.."
 alias ..5="cd ../../../../.."
 
 #SLURM
-alias squeue="squeue --format='%.18i %.9P %.30j %.8u %.2t %.10M %.19S %.6D %R'"
+squeue_formatted()
+{
+cols=$(tput cols)
+if ((${cols}>120))
+then 
+  squeue --format='%.18i %.9P %.30j %.8u %.2t %.10M %.19S %.6D %R' "$@"
+elif ((${cols}>100))
+then
+  squeue --format='%.18i %.9P %.20j %.8u %.2t %.10M %.6D %R' "$@"
+else 
+  squeue --format='%.8i %.9P %.10j %.8u %.2t %.10M %.6D %R' "$@"
+fi
+}
+alias squeue=squeue_formatted
