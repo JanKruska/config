@@ -15,6 +15,20 @@ alias ..3="cd ../../.."
 alias ..4="cd ../../../.."
 alias ..5="cd ../../../../.."
 
+#Standard options
+
+paru_options()
+{
+cols=$(tput cols)
+if [ -z "$@" ]
+then 
+  paru --sudoloop --bottomup -Syu
+else 
+  paru --sudoloop --bottomup "$@"
+fi
+}
+alias paru=paru_options
+
 #SLURM
 squeue_formatted()
 {
