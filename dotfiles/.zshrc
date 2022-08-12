@@ -79,6 +79,7 @@ plugins=(
     virtualenv
     zsh-autocomplete
     zsh-syntax-highlighting
+    fzf
 )
 source $ZSH/oh-my-zsh.sh
 
