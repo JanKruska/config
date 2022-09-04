@@ -116,7 +116,7 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
-export PATH="/opt/cuda/bin:$PATH"
+export PATH="$PATH:/opt/cuda/bin"
 export VISUAL=vim
 export EDITOR="$VISUAL"
 export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket" #ssh-agent config
