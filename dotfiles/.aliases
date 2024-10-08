@@ -44,3 +44,6 @@ else
 fi
 }
 alias squeue=squeue_formatted
+
+#pacman
+alias pacman_remove_orphans="sudo pacman -Rns $(pacman -Qtdq)"
