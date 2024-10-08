@@ -80,6 +80,7 @@ plugins=(
     zsh-autocomplete
     zsh-syntax-highlighting
     fzf
+    dotenv
 )
 source $ZSH/oh-my-zsh.sh
 
@@ -101,6 +102,8 @@ source $ZSH/oh-my-zsh.sh
 export ARCHFLAGS="-arch x86_64"
 
 source $HOME/.aliases
+#Any machine local settings are contained in the .localrc file
+[ -f "$HOME/.localrc" ] && source $HOME/.localrc
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
@@ -116,7 +119,13 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
-export PATH="$PATH:/opt/cuda/bin"
+
+if [ -d "/opt/cuda/bin" ] ; then
+    export PATH="$PATH:/opt/cuda/bin"
+fi
+if [ -d "${KREW_ROOT:-$HOME/.krew}/bin" ] ; then
+    export PATH="$PATH:${KREW_ROOT:-$HOME/.krew}/bin"
+fi
 export VISUAL=vim
 export EDITOR="$VISUAL"
 export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket" #ssh-agent config
