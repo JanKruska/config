@@ -47,3 +47,23 @@ alias squeue=squeue_formatted
 
 #pacman
 alias pacman_remove_orphans="sudo pacman -Rns $(pacman -Qtdq)"
+
+#KDE screens
+alias screen-ws="kscreen-doctor \
+output.DP-2.disable \
+output.HDMI-A-1.enable  \
+output.HDMI-A-1.mode.1920x1080@60 \
+output.HDMI-A-1.position.0,192 \
+output.HDMI-A-1.priority.2 \
+output.DP-3.enable \
+output.DP-3.mode.2560x1440@144 \
+output.DP-3.position.1920,0 \
+output.DP-3.priority.1"
+
+alias screen-beamer="kscreen-doctor \
+output.HDMI-A-1.disable  \
+output.DP-3.disable \
+output.DP-2.enable \
+output.DP-2.mode.1920x1080@60 \
+"
+
